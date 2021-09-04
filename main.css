@@ -1,0 +1,49 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 400px;
+    width: 800px;
+}
+
+div#a {
+    /* clip-path: polygon(0 0, 45% 0, 55% 100%, 0% 100%); */
+    /* background-color: blue; */
+    background-image: url('/pictures/polygon_low_poly_art_130453_1920x1080.jpg');
+}
+
+div#b {
+    /* background-color: crimson; */
+    background-image: url('/pictures/low_poly_polygon_landscape_abstraction_103765_1920x1080.jpg');
+    clip-path: polygon(800px 0, 400px 0, 400px 400px, 800px 400px);
+}
+
+.clipped {
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button#slider {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    top: 190px;
+    left: 390px;
+}
+
+section.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 800px;
+    text-align: center;
+}
