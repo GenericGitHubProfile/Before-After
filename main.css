@@ -7,11 +7,6 @@
     padding: 0;
 }
 
-/* section#before-after {
-    margin: 2rem;
-    border: 1px solid black;
-} */
-
 div.pictureSlide {
     display: flex;
     align-items: center;
@@ -20,18 +15,6 @@ div.pictureSlide {
     touch-action: none;
     margin: 2rem;
     border: 1px solid black;
-}
-
-div#a {
-    /* clip-path: polygon(0 0, 45% 0, 55% 100%, 0% 100%); */
-    /* background-color: blue; */
-    background-image: url('/pictures/polygon_low_poly_art_130453_1920x1080.jpg');
-}
-
-div#b {
-    /* background-color: crimson; */
-    background-image: url('/pictures/low_poly_polygon_landscape_abstraction_103765_1920x1080.jpg');
-    clip-path: polygon(800px 0, 400px 0, 400px 400px, 800px 400px);
 }
 
 .clipped {
