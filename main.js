@@ -1,46 +1,54 @@
-let slider = document.getElementById('slider');
-let divB = document.getElementById('b');
+// import { DragElement } from './lib/dragElement.mjs';
+import { PictureSlider } from './lib/pictureSlider.mjs';
 
-let p1x = p2x = 0;
+let container = document.getElementById('before-after');
+let container2 = document.getElementById('test2');
+// let slider = document.getElementById('slider');
+// let divB = document.getElementById('b');
 
-function DragElement(slider) {
-    slider.addEventListener('mousedown',DragMouseDown);
-}
+// let dragEl = new DragElement(container);
+let picSlide = new PictureSlider(container, '/pictures/polygon_low_poly_art_130453_1920x1080.jpg', '/pictures/low_poly_polygon_landscape_abstraction_103765_1920x1080.jpg', 1200);
+let picSlide2 = new PictureSlider(container2, '/pictures/vortex-flower-22042-1920x1080.jpg', '/pictures/waves-2560x1440-hd-15377.jpg');
+// let p1x, p2x = 0;
 
-function DragMouseDown(e) {
-    e = e || window.Event;
-    e.preventDefault();
+// function DragElement(slider) {
+//     slider.addEventListener('mousedown',DragMouseDown);
+// }
 
-    p2x = e.clientX;
-    // p2y = e.clientY;
-    document.addEventListener('mouseup', CloseDragEvent);
-    document.addEventListener('mousemove', SliderDrag);
-}
+// function DragMouseDown(e) {
+//     e = e || window.Event;
+//     e.preventDefault();
 
-function SliderDrag(e) {
-    e = e || window.Event;
-    // p1x = p2x - e.clientX;
-    p1x = (p2x > 800) ? 0 : p2x - e.clientX;
-    // p1y = p2y - e.clientY;
-    // p2x = e.clientX;
-    p2x = e.clientX;
-    // p2y = e.clientY;
+//     p2x = e.clientX;
+//     // p2y = e.clientY;
+//     document.addEventListener('mouseup', CloseDragEvent);
+//     document.addEventListener('mousemove', SliderDrag);
+// }
 
-    ChangeClipPath(p2x);
+// function SliderDrag(e) {
+//     e = e || window.Event;
+//     p1x = p2x - e.clientX;
+//     // p1x = (p2x > 800) ? 0 : p2x - e.clientX;
+//     // p1y = p2y - e.clientY;
+//     // p2x = e.clientX;
+//     p2x = e.clientX;
+//     // p2y = e.clientY;
 
-    // slider.style.top = (slider.offsetTop - p1y) + "px";
-    slider.style.left = (slider.offsetLeft - p1x) + "px";
-}
+//     ChangeClipPath(p2x);
 
-function CloseDragEvent() {
-    document.removeEventListener('mouseup', CloseDragEvent);
-    document.removeEventListener('mousemove', SliderDrag);
-}
+//     // slider.style.top = (slider.offsetTop - p1y) + "px";
+//     slider.style.left = (slider.offsetLeft - p1x) + "px";
+// }
 
-function ChangeClipPath(x) {
-    divB.style.clipPath = `polygon(800px 0, ${x}px 0, ${x}px 400px, 800px 400px)`;
-    // divB.setAttribute('style', `clip-path: polygon(800px 0, ${x}px 0, ${x}px 400px, 800px 400px)`)
-    // console.log(divB.style.clipPath);
-}
+// function CloseDragEvent() {
+//     document.removeEventListener('mouseup', CloseDragEvent);
+//     document.removeEventListener('mousemove', SliderDrag);
+// }
 
-DragElement(slider);
+// function ChangeClipPath(x) {
+//     divB.style.clipPath = `polygon(800px 0, ${x}px 0, ${x}px 400px, 800px 400px)`;
+//     // divB.setAttribute('style', `clip-path: polygon(800px 0, ${x}px 0, ${x}px 400px, 800px 400px)`)
+//     // console.log(divB.style.clipPath);
+// }
+
+// DragElement(slider);

@@ -7,9 +7,19 @@
     padding: 0;
 }
 
-section {
-    height: 400px;
-    width: 800px;
+/* section#before-after {
+    margin: 2rem;
+    border: 1px solid black;
+} */
+
+div.pictureSlide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    touch-action: none;
+    margin: 2rem;
+    border: 1px solid black;
 }
 
 div#a {
@@ -32,13 +42,22 @@ div#b {
     background-size: cover;
 }
 
-button#slider {
-    position: absolute;
+div.dragItem {
     height: 20px;
     width: 20px;
-    background-color: black;
-    top: 190px;
-    left: 390px;
+    background-color: white;
+    border: 2px solid black;
+    z-index: 100;
+    touch-action: none;
+    user-select: none;
+}
+
+div.dragItem:active {
+    background-color: rgb(220, 220, 220);
+}
+
+div.dragItem:hover {
+    cursor: pointer;
 }
 
 section.grid {
